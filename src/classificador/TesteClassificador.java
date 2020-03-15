@@ -1,7 +1,6 @@
 
 package classificador;
 
-import static classificador.Classificador.classificador;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,10 @@ public class TesteClassificador {
        grupos.add(new Grupo("Preto",0.0 , 0.0 ,0.0));// não fala idioma, não toca instrumento e não pratica esporte
        
        double[] valeria={0.0 , 0.0 , 0.0}; 
-      System.out.println("Valéria é do grupo : " + classificador( grupos,valeria));
+       System.out.println("Distância Euclidiana");
+       System.out.println("Valéria é do grupo : " + Classificador.classificadorEuclidiano( grupos,valeria));
+       System.out.println("Distância Manhattan");
+       System.out.println("Valéria é do grupo : " + Classificador.classificadorManhattan(grupos, valeria)); 
        
     }
     
